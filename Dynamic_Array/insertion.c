@@ -17,7 +17,7 @@ int main()
     printf("The array Before Insertion: ");
     display(arr, n);
     int pos;
-    printf("Enter the position at which the element is to be inserted [0 to %d]: ", n);
+    printf("Enter the position at which the element is to be inserted [1 to %d]: ", n);
     scanf("%d", &pos);
     if (pos > n)
     {
