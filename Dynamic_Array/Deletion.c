@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertion(int *arr, int *n, int pos);
+int Deletion(int *arr, int *n, int pos);
 void display(int *arr, int n);
 int main()
 {
@@ -14,10 +14,10 @@ int main()
         printf("Enter the element %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
-    printf("The array Before Insertion: ");
+    printf("The array Before Deletion: ");
     display(arr, n);
     int pos;
-    printf("Enter the position at which the element is to be inserted [0 to %d]: ", n);
+    printf("Enter the position at which the element is to be Delete [1 to %d]: ", n);
     scanf("%d", &pos);
     if (pos > n)
     {
@@ -25,8 +25,9 @@ int main()
     }
     else
     {
-        insertion(arr, &n, pos - 1);
-        printf("The array After Insertion: ");
+        printf("The element deleted is %d\n", Deletion(arr, &n, pos - 1));
+       
+        printf("The array After Deletion: ");
         display(arr, n);
     }
 
@@ -34,17 +35,15 @@ int main()
     return 0;
 }
 
-void insertion(int *arr, int *n, int pos)
-{
-    int ele;
-    printf("Enter the element to be inserted: ");
-    scanf("%d", &ele);
-    for (int i = *n; i >= pos; i--)
+int Deletion(int *arr, int *n, int pos)
+{   
+    int ele = arr[pos];
+    for (int i = pos; i < *n; i++)
     {
-        arr[i] = arr[i - 1];
+        arr[i] = arr[i + 1];
     }
-    arr[pos] = ele;
-    (*n)++;
+    (*n)--;
+    return ele;
 }
 
 void display(int *arr, int n)
