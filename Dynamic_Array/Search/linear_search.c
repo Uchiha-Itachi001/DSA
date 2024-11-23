@@ -36,3 +36,15 @@ int main()
 
     return 0;
 }
+
+/*
+ ! Output ::: 
+Enter the size of the array: 5
+Enter the element 1: 1
+Enter the element 2: 2
+Enter the element 3: 3
+Enter the element 4: 4
+Enter the element 5: 5
+Enter the element to be searched: 5
+The Element 5 found at index : 5
+*/

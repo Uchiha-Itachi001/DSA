@@ -55,3 +55,18 @@ void display(int *arr, int n)
     }
     printf("\n");
 }
+
+/*
+ ::: Output :::
+
+ Enter the size of the array: 5
+Enter the element 1: 1
+Enter the element 2: 2
+Enter the element 3: 3
+Enter the element 4: 4
+Enter the element 5: 5
+The array Before Insertion: 1 2 3 4 5       
+Enter the position at which the element is to be inserted [1 to 5]: 2
+Enter the element to be inserted: 100
+The array After Insertion: 1 100 2 3 4 5 
+*/
