@@ -1,4 +1,4 @@
 # DSA
 DSA using C <br>
 Author :: Pankoj Roy <br>
-programming Language:: C 
+programming Language :: C 
