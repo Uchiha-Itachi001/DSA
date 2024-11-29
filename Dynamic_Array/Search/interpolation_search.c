@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void Interpolation(int *arr,int n);
+void Interpolation(int *arr,int n);  //Interpolation Search Function
 int main()
 {
     int n;

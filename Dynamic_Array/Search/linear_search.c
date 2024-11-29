@@ -16,6 +16,8 @@ int main()
     bool flag = false;
     printf("Enter the element to be searched: ");
     scanf("%d", &ele);
+    
+     //Linear Search 
     for (int i = 0; i < n; i++)
     {
         if (arr[i] == ele)

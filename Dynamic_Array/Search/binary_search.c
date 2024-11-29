@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void BinarySearch(int *arr, int n);
+void BinarySearch(int *arr, int n); //Binary Search Function
 int main()
 {
 

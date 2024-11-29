@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertion(int *arr, int *n, int pos);
-void display(int *arr, int n);
+void insertion(int *arr, int *n, int pos); //insertion Function
+void display(int *arr, int n); //Display Function
 int main()
 {
     int n;
