@@ -9,7 +9,7 @@ typedef struct node
 
 //Traversal Function
 void Traversal(node *head);
-node* Insertion_At_Beginning(node* head);
+node* InsertionAtBeginning(node* head);
 
 int main()
 {   
@@ -38,14 +38,14 @@ int main()
 
     printf("After Inserting element at the Beginning are : \n");
 
-    head = Insertion_At_Beginning(head);
+    head = InsertionAtBeginning(head);
     Traversal(head); // LInk-List Traversal
     
     
     return 0;
 }
 
-node* Insertion_At_Beginning(node* head){
+node* InsertionAtBeginning(node* head){
     int ele;
     printf("Enter the inserted Element : ");
     scanf("%d",&ele);
