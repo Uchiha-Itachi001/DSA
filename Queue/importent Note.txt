@@ -1,0 +1,13 @@
+Circular and Liner Queue are same just few Things are change 
+In liner index increment : i + +
+In circuler index increment : (i+1) % total_size
+
+***
+(1): In both Queue the IsEmpty function is same ---
+    int  isEmpty(Queue *p){
+        return (p->back == p->front)?1:0;
+    }
+(2): In liner-Queue ~
+        --front and back(or rare) initialize = -1;
+    but in Circular-Queue ~
+        --front and back(or rare) initialize = 0
