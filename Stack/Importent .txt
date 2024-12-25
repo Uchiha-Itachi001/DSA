@@ -1,0 +1,25 @@
+Peek,Stack-Top,Stack-bottom are Easy function's...
+
+(--------Peek Function--------)
+int peek(Stack *s) {
+    if (isEmpty(s)) {
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return s->data[s->top];
+}
+
+(--------Stack-Top Function--------)
+int stackTop(Stack *s) {
+    return peek(s);
+}
+
+
+(--------Stack-bottom Function--------)
+int stackBottom(Stack *s) {
+    if (isEmpty(s)) {
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return s->data[0];
+}
