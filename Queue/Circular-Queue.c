@@ -14,7 +14,7 @@ int DeQueue(Queue *p);
 void EnQueue(Queue *p, int n);
 void Display(Queue *p);
 
-int main(){
+int main(){ 
 
     Queue *p;
     p = (Queue *)malloc(sizeof(Queue));
