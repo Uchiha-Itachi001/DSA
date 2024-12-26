@@ -1,0 +1,43 @@
+The Pre-Order,In-Order and Post-Order traversal ,all Are 
+simmilar they just have One thing Diffrent....
+The position Of The ROOT node...
+
+****
+(1) Pre-Order = Root - Left - Right
+(2) In-Order = Left - Root -  Right
+(3) Post-Order =  Left - Right - Root 
+ 
+ ---I Think You notice that in Preorder Root Node is before Right and Left,
+ Similarly, in-Order the Root is in Middle....
+
+ ---- Also In the Code You Find This thing ....
+
+ <--
+  printf("%d ",p->data); // This line is changing
+ -->
+
+ (1)Pre-Order:
+  void PostOrder(node*p){
+    if(p!=NULL){
+        printf("%d ",p->data); <---Here
+        PostOrder(p->left);
+        PostOrder(p->right);
+    }
+  }
+
+ (2)In-Order:
+  void PostOrder(node*p){
+    if(p!=NULL){
+        PostOrder(p->left);
+        printf("%d ",p->data); <---Here
+        PostOrder(p->right);
+    }
+  }
+ (3)Post-Order:
+  void PostOrder(node*p){
+    if(p!=NULL){
+        PostOrder(p->left);
+        PostOrder(p->right);
+        printf("%d ",p->data); <---Here
+    }
+  }
