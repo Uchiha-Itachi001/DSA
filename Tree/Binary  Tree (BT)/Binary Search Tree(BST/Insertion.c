@@ -10,6 +10,31 @@ typedef struct node {
 node* createNode(int data);
 int isBST(node* p, node** prev);
 void inOrder(node* root);
+void insertion(node *root,int key){
+    node *prev = NULL;
+    while (root!=NULL)
+    {
+        prev = root;
+        if(root->data == key){
+            printf("%d is already present in The BST\n\n",key); //BST do not contain Duplicate Elements
+            return ;
+        }
+        else if(root->data >key){
+            root = root->left;
+        }
+        else{
+            root = root->right;
+        }
+    }
+    node *new = createNode(key);
+    if(key < prev->data ){
+        prev->left = new;
+    }
+    else{
+        prev->left = new;
+    }
+    printf("\n%d is Successfully inserted in the BST\n\n",key);
+}
 
 int main() {
     node *root;
@@ -26,22 +51,22 @@ int main() {
         (10)       (15)
       /   \       
     (9)   (11)  
+   /
+ (8) <----inserting
     */
     root->left = p1;
     root->right = p2;
     p1->left = p3;
     p1->right = p4;
 
-    printf("The In-order Traversal Of this Tree is: ");
+    printf("The In-order Traversal Before Insertion :: \n");
     inOrder(root);
     printf("\n");
+    
+    insertion(root,8);
 
-    node* prev = NULL;
-    if (isBST(root, &prev)) {
-        printf("The tree is a BST\n");
-    } else {
-        printf("The tree is not a BST\n");
-    }
+    printf("The In-order Traversal After Insertion ::\n");
+    inOrder(root);
 
     return 0;
 }
@@ -53,21 +78,7 @@ void inOrder(node* root) {
         printf("%d ", root->data);
         inOrder(root->right);
     }
-}
 
-// Function to check if the tree is a BST
-int isBST(node* p, node** prev) {
-    if (p != NULL) {
-        if (!isBST(p->left, prev)) {
-            return 0;
-        }
-        if (*prev != NULL && p->data <= (*prev)->data) {
-            return 0;
-        }
-        *prev = p;
-        return isBST(p->right, prev);
-    }
-    return 1;
 }
 
 // For creating Nodes
@@ -78,3 +89,17 @@ node* createNode(int data) {
     new->right = NULL;
     return new;
 }
+
+/*
+
+:::OUTPUT::::
+
+The In-order Traversal Before Insertion :: 
+9 10 11 12 15
+
+8 is Successfully inserted in the BST
+
+The In-order Traversal After Insertion ::
+8 9 10 11 12 15
+
+*/
